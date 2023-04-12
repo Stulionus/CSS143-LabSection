@@ -1,3 +1,5 @@
+package Labs.Lab2;
+
 /**
  * Driver for CSS 162 Lab
  *
@@ -13,7 +15,7 @@ public class ShapesPictureDriver {
 	//precondition: assumes {Square, Circle, Picture} all exist in the same working directory
 	//postcondition: 2 Squares, 2 Circles, and 1 Picture are constructed and manipulated, then reclaimed once main exits
 	public static void main(String[] args) {
-		/* Uncomment for Square Tests
+
 		Square firstSquare = new Square();
 		Square secondSquare = new Square(10,20);
 
@@ -31,7 +33,7 @@ public class ShapesPictureDriver {
 
 		secondSquare.draw();
 
-		*/
+
 
 
 
