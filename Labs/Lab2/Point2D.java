@@ -1,6 +1,6 @@
 package Labs.Lab2;
 
-public class Point2D {
+public class  Point2D {
     private int x;
     private int y;
 
