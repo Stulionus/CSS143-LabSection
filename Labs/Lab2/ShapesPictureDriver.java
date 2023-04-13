@@ -59,7 +59,7 @@ public class ShapesPictureDriver {
 		secondCircle.draw();
 
 
-		/* Uncomment for Picture Tests
+
 		//now, lets see the bigger picture
 		ObjectList picture = new ObjectList();
 
@@ -71,7 +71,6 @@ public class ShapesPictureDriver {
 		System.out.println( "Drawing a Picture using ObjectList with Circles and Squares:\n" );
 
 		System.out.println(picture.toString());
-		*/
 
 	}
 
