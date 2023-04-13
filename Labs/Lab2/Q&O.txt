@@ -1,0 +1,22 @@
+
+   1) Why did we do so much copying-and-pasting in our software above?
+        How can this approach be problematic?
+
+        We did so much copying-and-pasting because many objects that we have been working wit have multiple similar
+        properties and actions.
+
+        This can be solved by class inheritance
+
+    2)Are there obvious improvements that could be made here with respect the software design for Squares and Circles?
+
+    There should be one class called shapes that would contain properties that any shape will hve like position and
+    then there will be classes that inherit from shapes and have their own properties and functions
+
+   3)What programming constructs were you familiar with, and which did you need to look up?
+
+    I was familiar with all of them except list of objets but i did not look it up since it is very similar to array of int
+
+   4)Assume we used a separate array for Squares and for Circles rather than one unifying Object array.
+        How would this complicate the task of adding a new Shape (say, a Triangle) to our ObjectList class?
+
+        We will have to create an entire new array to store new type of shapes and that would take up more memmory space
