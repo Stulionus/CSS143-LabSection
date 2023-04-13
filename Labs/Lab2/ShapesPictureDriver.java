@@ -37,7 +37,7 @@ public class ShapesPictureDriver {
 
 
 
-		/* Uncomment for Circle Tests
+
 		//now for some circles
 		Circle firstCircle = new Circle();
 		Circle secondCircle = new Circle(5,5);
@@ -57,7 +57,7 @@ public class ShapesPictureDriver {
 		System.out.println( "Drawing the second circle with area " + secondCircle.getArea());
 
 		secondCircle.draw();
-		*/
+
 
 		/* Uncomment for Picture Tests
 		//now, lets see the bigger picture
