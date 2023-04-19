@@ -1,9 +1,9 @@
 package Labs.Lab3;
 
 public class Date {
-    int day;
-    int month;
-    int year;
+    private int day;
+    private int month;
+    private int year;
 
     public Date(){
         day = 0;

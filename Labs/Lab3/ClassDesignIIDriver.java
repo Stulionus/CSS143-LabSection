@@ -23,7 +23,7 @@ public class ClassDesignIIDriver {
     public static void main(String[] args) {
         //uncomment the desired Driver or Demo below and run this code to test your progress
         //dateDriver();
-        //shapeDriver();
+        shapeDriver();
         //charListDriver();
         //lineSegmentDriver();
         //immutableFractionDriver();        
@@ -52,7 +52,7 @@ public class ClassDesignIIDriver {
 
     private static void shapeDriver() {
         System.out.println("uncomment the code to use the shapeDriver");
-        /*Shape a = new Shape();
+        Shape a = new Shape();
         Shape b = new Shape(10,10, Color.DARK_GRAY);
         Shape c = new Shape(b);
         
@@ -62,7 +62,7 @@ public class ClassDesignIIDriver {
         System.out.println("a: " +a.toString());
         System.out.println("b: " +b.toString());
         System.out.println("c: " +c.toString());
-        */
+
     }
     
     private static void charListDriver() {
