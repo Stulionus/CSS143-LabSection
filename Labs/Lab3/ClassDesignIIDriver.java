@@ -23,8 +23,8 @@ public class ClassDesignIIDriver {
     public static void main(String[] args) {
         //uncomment the desired Driver or Demo below and run this code to test your progress
         //dateDriver();
-        shapeDriver();
-        //charListDriver();
+        //shapeDriver();
+        charListDriver();
         //lineSegmentDriver();
         //immutableFractionDriver();        
         //math2Driver();
@@ -67,7 +67,7 @@ public class ClassDesignIIDriver {
     
     private static void charListDriver() {
         System.out.println("uncomment the code to use the charListDriver");
-        /*CharList a = new CharList();
+        CharList a = new CharList();
         CharList b = new CharList("Batman");
         CharList c = new CharList(b);
         
@@ -86,7 +86,7 @@ public class ClassDesignIIDriver {
         
         System.out.println("B and A are equal : " + b.equals(a));
         System.out.println("B and C are equal : " + b.equals(c));
-        */
+
     }
     
     public static void lineSegmentDriver() {
