@@ -27,8 +27,8 @@ public class ClassDesignIIDriver {
         //charListDriver();
         //lineSegmentDriver();
         //immutableFractionDriver();
-        math2Driver();
-        //passByReferenceDemo();
+        //math2Driver();
+        passByReferenceDemo();
     }
     
     
@@ -189,4 +189,21 @@ public class ClassDesignIIDriver {
         //if I didn't hand this function a copy of b from main, but rather a reference to the object that is known in main as b, what happens here?
         //if I make a change to c, are my changes reflected back in the code that called this function?  In other words, did this change b of main?
     }
+
+    /*
+    On observing the execution of the demo code, answer the following questions...
+
+    What is the primary difference between passing a primitive to a method versus passing an object?
+        Primitive is passed by value meaning that you cannot change it value in main through argument while object is passed by reference,
+        and therefore it's value in main was changed.
+    When a primitive is passed to a method, does the scope of that primitive change (i.e., grow to include the called method)?
+        No.
+    What about when an object is passed to a method?
+        Technically no.
+    How then would you describe the scope of an object that has been passed to a method?
+        I think that more accurate would be to say that the scope of the object has not changed but there is now a new
+        object with different scope, but they both are stored in the same place in memory.
+    */
+
+
 }
