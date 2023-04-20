@@ -25,8 +25,8 @@ public class ClassDesignIIDriver {
         //dateDriver();
         //shapeDriver();
         //charListDriver();
-        lineSegmentDriver();
-        //immutableFractionDriver();        
+        //lineSegmentDriver();
+        immutableFractionDriver();
         //math2Driver();
         //passByReferenceDemo();
     }
@@ -113,7 +113,7 @@ public class ClassDesignIIDriver {
     
     public static void immutableFractionDriver() {
         System.out.println("uncomment the code to use the immutableFractionDriver");
-        /*Fraction a = new Fraction(1,2);
+        Fraction a = new Fraction(1,2);
         Fraction b = new Fraction(3,4);
         Fraction c = new Fraction(b);
     
@@ -125,6 +125,8 @@ public class ClassDesignIIDriver {
         //(1)uncomment out to discover errors
         //a.setNum(3);
         //a.setDenom(5);
+        // I do not understand this question, if fractions are not meant to be changed why do we need setters?
+
         
         //(2)fix the following 2 errors
         System.out.println("a.num:"+a.getNum());
@@ -132,16 +134,17 @@ public class ClassDesignIIDriver {
         
         
         //(3)which of the following code is correct to change the fraction a?
-        a.add(b);
-        a = a.add(b);
+        //a.add(b);
+        a = a.add(b);// This is the correct way
         
-        System.out.println("a:"+a.toString());
+        System.out.println("a:"+a.toString());// Also I do not understand why "Sample output" says that this should be 10/8
+        //  1/2 + 3/4 = 5/4 not 10/8, 5/4 is reduced 10/8 and the assignment says that fraction should always be reduced
         System.out.println("b:"+b.toString());
         System.out.println("c:"+c.toString());
         
         System.out.println("a.equals(b):" + a.equals(b));
         System.out.println("b.equals(c):" + b.equals(c));
-        */
+
         
     }
 
