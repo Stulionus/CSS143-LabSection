@@ -10,6 +10,7 @@ public class DebugMe{
 		compareBoxes();
 	}
 
+
 	//This function is designed to print the sums of all numbers between 1 and the
 	//first number entered as an argument to DebugMe
 	//For example, if you enter:  DebugMe 3
@@ -19,13 +20,12 @@ public class DebugMe{
 	//  The sum of the first 3 numbers is 6.
 
 	public static void printSums(String[] args){
-	{
 
 		int count;
 
-		count = Integer.parseInt(args);
+		count = Integer.parseInt(args[1]);
 
-		for (i = 1 ; i <= count ; i++);
+		for (int i = 1 ; i <= count ; i++);
 		{
 			int sum = 0;
 			int i = 0;
@@ -54,7 +54,7 @@ public class DebugMe{
 	//Box 3 is larger than Box 4.
 
 
-	public static void compareBoxes(){
+	public static void compareBoxes() {
 
 		Box[] array = new Box[5];
 		array[0] = new Box(4,5,3,2);
