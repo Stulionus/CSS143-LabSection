@@ -49,9 +49,6 @@ public class TestFinally{
         }
 
 		//Close the files
-
-
-
         //5. Close the finally block here.
     }
 }
