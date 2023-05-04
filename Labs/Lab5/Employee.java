@@ -33,5 +33,33 @@ public abstract class Employee {
 	
 
 	public abstract double calculateWeeklyPay();
+
+	/*
+	Questions
+    What methods are polymorphic in the Employee Hierarchy?
+    Calculate Weekly Pay is the only polymorphic method.
+
+    How could we build a method like getRandShape() above but for use with Employees?
+
+	public Shape getRandEmployee() {
+			Employee retVal = null;
+			final String name = need to write a function that will choose a random name
+			final int social = same here but 9 random int's in a row;
+
+
+			switch( ( int )(Math.random() * 4) ) {
+		case 0: 	retVal= Consultant..
+			break;
+		case 1: 	retVal = PermamentHire..
+			break;
+
+		 and so on..
+	}
+
+			return retVal;
+
+    If we built a getRandomEmployee() method that returns various Employee subclass objects; write a few lines of code that would demonstrate late binding
+
+	 */
 	
 }
