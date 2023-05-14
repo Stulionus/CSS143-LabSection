@@ -20,21 +20,22 @@ public class AssertDemo {
 	 */
 	public static void main(String[] args) {
 		assert(true);
-		assert(false);
+		//assert(false);
+
+		//warmUpAsserts();
 		
-		warmUpAsserts();
+		//assertWithPrimitives();
 		
-		assertWithPrimitives();
-		
-		assertWithObjects();
+		//assertWithObjects();
 		
 		homeworkRelatedAsserts();
 	}
 
 	/*
 	 * Just a few warm-up asserts here.
-	 * Add two new assert() statements after the TODO below
+	 * Add two new assert() statements after the
 	 */
+
 	private static void warmUpAsserts() {	
 			assert( 5 > 1 );
 			
@@ -43,7 +44,9 @@ public class AssertDemo {
 	
 			assert(null == null);	  //could this ever be false?
 			assert(true == true);	  //a bad day indeed if this could be false
-			//TODO: craft two more asserts and place them here.  If they're false, they'll crash the program.
+
+			assert(5 == 5);
+			assert (2+2 == 4);
 	}
 
 	/*
@@ -66,6 +69,9 @@ public class AssertDemo {
 		ArrayList<String> emptyList = new ArrayList<String>();
 		assert(emptyList.size() == 0);
 		//TODO: build two more asserts that use primitives and relational operators here
+
+		assert (num > denom);
+		assert (num % denom == 0);
 	}
 	
 	/*
@@ -81,6 +87,11 @@ public class AssertDemo {
 		//TODO: make a few objects from any previous lab and test them with assert
 		//example: make two Point objects at the origin and assert they are equal
 		//assert(p1.equals(p2);  //example
+		Point2D p1 = new Point2D(0,1);
+		Point2D p2 = new Point2D(0,1);
+		assert (p1.equals(p2));
+		assert (p1 != p2);
+		assert (p1.getY() == p2.getY());
 	}
 
 
@@ -94,6 +105,8 @@ public class AssertDemo {
 		//how many aliases for the one "new" object created in main exist in this scope? 
 		//1? 2? 3? Which are they?
 		assert(this == input);  //== does an address check for objects, which is frequently NOT what we want
+		// This function prints address of this object and argument object and then crashes if they are not the same.
+
 	}
 
 	/*	
@@ -107,5 +120,7 @@ public class AssertDemo {
 		int cents = 0;
 		assert( cents >= 0 && cents <=99);  //another class invariant is written as an assert here.
 		//TODO: craft 2 more asserts that you could use with any assignment
+		//assert (data  == null);
+		//asser (flag[flag.length == 2])
 	}
 }

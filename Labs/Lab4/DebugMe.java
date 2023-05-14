@@ -6,7 +6,9 @@ public class DebugMe{
 
 	public static void main(String args[]){
 
-		printSums(args);
+		String nums[] = {"3"};
+
+		printSums(nums);
 		compareBoxes();
 	}
 
@@ -23,13 +25,13 @@ public class DebugMe{
 
 		int count;
 
-		count = Integer.parseInt(args[1]);
+		count = Integer.parseInt(args[0]);
+		int i= 0 ;
+		int sum = 0;
 
-		for (int i = 1 ; i <= count ; i++);
+		for (i = 1; i <= count; i++)
 		{
-			int sum = 0;
-			int i = 0;
-			sum += i - 1;
+			sum += i;
 			System.out.println("The sum of the first " + i + " numbers is " + sum + ".");
 		}
 	}

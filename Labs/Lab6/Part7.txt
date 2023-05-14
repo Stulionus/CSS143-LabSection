@@ -1,0 +1,39 @@
+Using the above sentence as an incomplete guide split the embedded concepts into 4 distinct steps, such as:
+
+1. Setup & Initialization (for the program, or a specific function, similar to preconditions)
+
+boolean ifNeededFile
+
+2. Input
+
+String targetFileName;
+String currentDirectory;
+
+3. Processing
+
+check if file found or decide what to do
+
+4. Output
+
+weather file was found or not and in which directory
+
+Pseudocode Refinement Step 3 to (N-1) -------------------------------------------------------------------------
+
+
+1. Setup & Initialization (for the program, or a specific function, similar to preconditions)
+
+boolean ifNeededFile
+
+2. Input
+
+String targetFileName;
+String currentDirectory;
+
+3. Processing
+
+if ifNeededFile == true
+    return currentDirectory
+else if ifNeededFile == false
+    step into folder (call this function recursively)
+
+4. Output
