@@ -1,7 +1,6 @@
-/*
+package Labs.Lab7;/*
  * This class implements a queue with linked list
- * Author: Meng Yang
- * Date: Fall 2018
+ *
  */
 
 public class LLQueue {
@@ -13,13 +12,14 @@ public class LLQueue {
 
         // Constructor with no parameters for inner class
         public Node() {
-           
+           data = null;
+           next = null;
         }
 
         // Parametrized constructor for inner class
         public Node(Object newData, Node nextLink) {
-            // to do: Data part of Node is an Object
-            // to do: Link to next node is a type Node
+            data = newData;
+            next = nextLink;
         }
     }
     
@@ -27,33 +27,61 @@ public class LLQueue {
     private Node back;
 
     public LLQueue() {
-     // to do
+     front = null;
+     back = null;
+
     }
     
     //offer(enqueue) adds the object at the back of the queue
     public void offer(Object o) {
-     // to do
+        Node newNode = new Node(o, null);
+
+        if (back == null) {
+            front = newNode;
+            back = newNode;
+        } else {
+            back.next = newNode;
+            back = newNode;
+        }
     }
     
     //poll(dequeue): retrieves and removes the head of this queue, 
     //or returns null if this queue is empty.
     public Object poll() {
-     // to do
+        if (front == null) {
+            return null;
+        }
+
+        Object data = front.data;
+        front = front.next;
+
+        if (front == null) {
+            back = null;
+        }
+
+        return data;
     }
     
     // Returns the size of linked list by traversing the list
     public int size() {
-        // to do
+        int count = 0;
+        Node current = back;
+
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
     }
     //peek: Retrieves, but does not remove, the head of this queue, 
     //or returns null if this queue is empty.
     public Object peek() {
-        // to do
+        return front;
     } 
     
     //
     public boolean isEmpty() {
-        // to do
+        return front == null;
     } 
     
     // For two lists to be equal they must contain the same data items in

@@ -1,3 +1,4 @@
+package Labs.Lab7;
 
 /**
  * This class will use Nodes to form a linked list. It implements the LIFO
@@ -11,7 +12,7 @@
       
       // Constructor with no parameters for outer class
       public LLStack( ) {
-          // to do
+          head = null;
       }
       
       // This is an inner class specifically utilized for LLStack class,
@@ -22,19 +23,19 @@
          
          // Constructor with no parameters for inner class
          public Node(){
-             // to do
-             // to do
+             data = null;
+             next = null;
          }
         // Parametrized constructor for inner class
          public Node (Object newData, Node nextLink) {
-                 // to do: Data part of Node is an Object
-                // to do:  Link to next node is a type Node
+             data = newData;
+             next = nextLink;
          }
       }
       
        // Adds a node as the first node element at the start of the list with the specified data.
        public void addToStart(Object itemData) {
-           // to do 
+           head.data = itemData;
 		   // NOTE: the logic here could be implemented in a single line,
 		   // but not required to be a one liner.
        }
@@ -43,20 +44,39 @@
 	   // deleted.
        // Returns null if the list is empty.
        public Object deleteHead( ) {
-         // to do
+         if(head.data == null){
+             return null;
+         }
+         Object temp = head.data;
+         head = head.next;
+         return temp;
        }
       
       // Returns the size of linked list by traversing the list
       public int size( ) {
-		   // to do
-         
+		   int count = 0;
+            Node current = head;
+
+          while (current != null) {
+              count++;
+              current = current.next;
           }
           return count;
       }
-    
+
+
+
       // Finds if there is match for the given object
       public boolean contains(Object item) {
-          // to do
+          Node current = head;
+
+          while (current != null) {
+              if(current == item){
+                  return true;
+              }
+              current = current.next;
+          }
+          return false;
       }
       
       // Finds the first node containing the target item, and returns a
@@ -96,11 +116,15 @@
   
       
       public boolean isEmpty( ) {
-          // to do
+          return head == null;
       }
       
       public void clear( ) {
-          // to do
+          while (head != null) {
+              Node nextNode = head.next;
+              head.next = null;
+              head = nextNode;
+          }
       }
       // For two lists to be equal they must contain the same data items in
       // the same order. The equals method of T is used to compare data items.
