@@ -133,22 +133,20 @@ public class UsingStacksSuitorsLab implements Runnable {
 
 		boolean forward = true;
 		int count = 0;
-		while (forwardStack.size() + backwardStack.size() > 1) {
+		while (forwardStack.size() > 1 || backwardStack.size() > 1) {
 			if (forward) {
-				while (forwardStack.size() >1) {
-					if (count % 3 == 0) {
+				while (forwardStack.size() > 1) {
+					forwardStack.pop();
+					if (count % 3 != 0) {
 						backwardStack.push(forwardStack.pop());
-					} else {
-						forwardStack.pop();
 					}
 					count++;
 				}
 			} else {
 				while (backwardStack.size() > 1) {
-					if (count % 3 == 0) {
+					backwardStack.pop();
+					if (count % 3 != 0) {
 						forwardStack.push(backwardStack.pop());
-					} else {
-						backwardStack.pop();
 					}
 					count++;
 				}
