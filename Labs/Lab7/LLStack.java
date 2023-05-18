@@ -35,14 +35,22 @@ package Labs.Lab7;
       
        // Adds a node as the first node element at the start of the list with the specified data.
        public void addToStart(Object itemData) {
-           head.data = itemData;
-		   // NOTE: the logic here could be implemented in a single line,
+           Node newNode = new Node(itemData,null);
+
+           if (head != null) {
+               newNode.next = head;
+           }
+
+           head = newNode;
+           // NOTE: the logic here could be implemented in a single line,
 		   // but not required to be a one liner.
        }
        
        // Removes the head node and returns the data Object being 
 	   // deleted.
        // Returns null if the list is empty.
+
+    //This method is responsible for the LIFO behaviour
        public Object deleteHead( ) {
          if(head.data == null){
              return null;

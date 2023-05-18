@@ -47,6 +47,8 @@ public class LLQueue {
     
     //poll(dequeue): retrieves and removes the head of this queue, 
     //or returns null if this queue is empty.
+
+    //This method is responsible for the FIFO behaviour
     public Object poll() {
         if (front == null) {
             return null;
