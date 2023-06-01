@@ -43,12 +43,13 @@ public class SortDiver {
         }  
         
         // testing bubble sort for strings
+        /*
         array.stringBubbleSort();
         System.out.print("\n\nSorted String array: \n" );
         for(int i = 0; i < array.StringList.length; i++) {
            System.out.print(array.StringList[i] + "|");
         } 
-        
+
         // NOTE: You must comment out previous calls for int sort methods, 
         //       at this point the arrays are already sorted!
         array.selectionSort();
@@ -56,7 +57,7 @@ public class SortDiver {
         for(int i = 0; i < array.IntList.length; i++) {
            System.out.print(array.IntList[i] + "|");
         } 
-        
+        */
         // NOTE: You must comment out previous calls for String sort methods, 
         //       at this point the arrays are already sorted!
         array.stringSelectionSort();

@@ -1,6 +1,6 @@
 package Labs.Lab9;
 
-public class QuizScore {
+public class QuizScore implements Cloneable{
     private int score;
 
     public QuizScore(int score) {
@@ -13,5 +13,13 @@ public class QuizScore {
 
     public void setScore(int score) {
         this.score = score;
+    }
+
+    public QuizScore clone() {
+        try {
+            return (QuizScore) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
     }
 }
