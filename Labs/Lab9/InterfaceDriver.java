@@ -14,14 +14,14 @@ public class InterfaceDriver {
 
     //comment and uncomment the demo functions in main to test
     public static void main(String[] args) {
-        comparableDemo();
-        cloneableDemo();
+       //comparableDemo();
+        //cloneableDemo();
         //serializableDemo();
-        //actionListenerDemo();
+        actionListenerDemo();
     }
     
     public static void actionListenerDemo() {
-        //Application a = new Application();
+        Application a = new Application();
         
     }
     

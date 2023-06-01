@@ -1,6 +1,8 @@
 package Labs.Lab9;
 
-public class Student implements Comparable<Student>, Cloneable{
+import java.io.Serializable;
+
+public class Student implements Comparable<Student>, Cloneable, Serializable {
 	private String name;
 	private double GPA;
 
