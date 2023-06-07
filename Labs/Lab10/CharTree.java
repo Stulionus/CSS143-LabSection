@@ -149,7 +149,7 @@ public class CharTree {
              else if (subtree.rightLink == null) {subtree = subtree.leftLink;}
              else if (subtree.rightLink == null && subtree.leftLink == null) {
                  subtree = null;
-             } else {
+             } else { //Worst case :)
                 char newValue;
                 TreeNode current = subtree;
                 current = current.leftLink;
