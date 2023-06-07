@@ -26,7 +26,7 @@ public class MorseTree {
     public MorseTree() {
         Scanner fin = null;
         try {
-            File file = new File("data.txt");
+            File file = new File("D:\\Maxim\\Documents\\UWB\\CSS143-LabSection\\out\\production\\LabSection\\Labs\\Lab10\\data.txt");
             fin = new Scanner(file);
             while (fin.hasNextLine()) {
                 String line = fin.nextLine();
@@ -54,11 +54,17 @@ public class MorseTree {
 
     private TreeNode<Character> insertInSubtree(String morseStr, char letter, TreeNode subtree) {
         if (subtree == null) {
-            subtree = new TreeNode(letter);
-        } else if (morseStr.charAt(0) == '-') {
-            subtree.left = insertInSubtree(morseStr.substring(1), letter, subtree.left);
+            subtree = new TreeNode<>(letter);
+        } else if (morseStr.isEmpty()) {
+            // Handle the base case when morseStr is of length 0
+            // This indicates that we have reached the appropriate position to insert the letter
+            subtree.data = letter;
         } else if (morseStr.charAt(0) == '.') {
+            // Recursive case when the first char in morseStr is '.'
             subtree.right = insertInSubtree(morseStr.substring(1), letter, subtree.right);
+        } else if (morseStr.charAt(0) == '-') {
+            // Recursive case when the first char in morseStr is '-'
+            subtree.left = insertInSubtree(morseStr.substring(1), letter, subtree.left);
         }
         return subtree;
     }
@@ -98,11 +104,9 @@ public class MorseTree {
         while (scanner.hasNext()) {
             String token = scanner.next();
             Character translatedChar = translate(token);
-            if (translatedChar != null) {
-                retVal.concat(String.valueOf(translatedChar));
-            }
+            retVal.concat(String.valueOf(translatedChar));
         }
-
+        scanner.close();
         return retVal;
     }
 
@@ -113,29 +117,7 @@ public class MorseTree {
     }
 
     private boolean _toMorseCode(TreeNode root, char target, StringBuilder newString) {
-        if (root == null) {
-            return false;
-        }
-
-        boolean found = _toMorseCode(root.left, target, newString); // Traverse the left subtree
-
-        if ((char)root.data == target) {
-            newString.append("found "); // Append "found" when target character is found
-            return true; // Return true to indicate target character is found
-        } else {
-            if (root.left != null) {
-                newString.append("-"); // Append "-" when moving left
-            }
-            if (root.right != null) {
-                newString.append("."); // Append "." when moving right
-            }
-        }
-
-        if (!found) {
-            found = _toMorseCode(root.right, target, newString); // Traverse the right subtree
-        }
-
-        return found;
+       return false;
     }
 
 
@@ -143,10 +125,10 @@ public class MorseTree {
         MorseTree mt = new MorseTree();  //builds our tree using data from a file
 
         System.out.println(mt.translate("..."));  //prints out S
-        //System.out.println(mt.translate("---"));  //prints out O
-        //System.out.println(mt.translate(".......-"));  //prints out null
+        System.out.println(mt.translate("---"));  //prints out O
+        System.out.println(mt.translate(".......-"));  //prints out null
 
-        //System.out.println(mt.translateString("... --- ..."));  //SOS
+        System.out.println(mt.translateString("... --- ..."));  //SOS
         //System.out.println(mt.toMorseCode('S'));  //find where we are in the tree, remember path to root
     }
 
@@ -163,8 +145,8 @@ public class MorseTree {
             this.left = null;
         }
 
-        public TreeNode(char letter) {
-            this.data = letter;
+        public TreeNode(Object letter) {
+            this.data = (char) letter;
             this.right = null;
             this.left = null;
         }
